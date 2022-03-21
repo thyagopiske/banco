@@ -9,9 +9,9 @@ private:
     double taxaDeOperacao; //se é um valor fixo posso declarar aq direto?
 public:
     ContaCorrente(int numero_conta, double saldo);
-    virtual bool sacar(double valor);
-    virtual bool depositar(double valor);
-    virtual void mostrarDados();
+    bool sacar(double valor);
+    bool depositar(double valor);
+    void mostrarDados();
 };
 
 #endif

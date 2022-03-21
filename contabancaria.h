@@ -10,6 +10,7 @@ public:
     ContaBancaria(int numero_conta, double saldo);
     virtual bool sacar(double valor_saque);
     virtual bool depositar(double valor_deposito);
+    virtual void transferir(double valor, ContaBancaria& conta_destino);
 };
 
 #endif

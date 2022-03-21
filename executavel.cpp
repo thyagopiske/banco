@@ -1,6 +1,7 @@
 #include "executavel.h"
 #include "contacorrente.h"
 #include "contapoupanca.h"
+#include "relatorio.h"
 
 Executavel::Executavel(){};
 
@@ -12,5 +13,9 @@ void Executavel::executar(){
     cCorrente1.sacar(1200);
 
     cPoupanca1.depositar(1000);
-    cPoupanca1.sacar(1150);
+    cPoupanca1.sacar(2150);
+
+    Relatorio relatorio;
+    relatorio.gerarRelatorio(cCorrente1);
+    relatorio.gerarRelatorio(cPoupanca1);
 }

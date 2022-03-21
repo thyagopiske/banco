@@ -4,7 +4,7 @@
 class Imprimivel {
 private:
 public:
-    virtual void mostrarDados();
+    virtual void mostrarDados() =0;
 };
 
 #endif

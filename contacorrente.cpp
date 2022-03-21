@@ -13,7 +13,7 @@ bool ContaCorrente::sacar(double valor){
     }
 }
 
-bool ContaBancaria::depositar(double valor){
+bool ContaCorrente::depositar(double valor){
     if(valor > 0 && (saldo + valor) >= (taxaDeOperacao)){
         this->saldo += valor;
         this->saldo -= taxaDeOperacao;

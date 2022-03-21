@@ -17,3 +17,8 @@ bool ContaBancaria::depositar(double valor_deposito){
         return false;
     }
 }
+
+void ContaBancaria::transferir(double valor, ContaBancaria& conta_destino){
+    sacar(valor);
+    conta_destino.depositar(valor);
+}
