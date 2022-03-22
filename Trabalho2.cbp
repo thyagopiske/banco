@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,18 +34,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="contabancaria.cpp" />
-		<Unit filename="contabancaria.h" />
-		<Unit filename="contacorrente.cpp" />
-		<Unit filename="contacorrente.h" />
-		<Unit filename="contapoupanca.cpp" />
-		<Unit filename="contapoupanca.h" />
-		<Unit filename="executavel.cpp" />
-		<Unit filename="executavel.h" />
-		<Unit filename="imprimivel.h" />
+		<Unit filename="include/Banco.h" />
+		<Unit filename="include/contabancaria.h" />
+		<Unit filename="include/contacorrente.h" />
+		<Unit filename="include/contapoupanca.h" />
+		<Unit filename="include/executavel.h" />
+		<Unit filename="include/imprimivel.h" />
+		<Unit filename="include/relatorio.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="relatorio.cpp" />
-		<Unit filename="relatorio.h" />
+		<Unit filename="src/Banco.cpp" />
+		<Unit filename="src/contabancaria.cpp" />
+		<Unit filename="src/contacorrente.cpp" />
+		<Unit filename="src/contapoupanca.cpp" />
+		<Unit filename="src/executavel.cpp" />
+		<Unit filename="src/relatorio.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

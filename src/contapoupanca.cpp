@@ -7,6 +7,8 @@
 ContaPoupanca::ContaPoupanca(int numero_conta, double saldo):ContaBancaria(numero_conta, saldo){};
 
 bool ContaPoupanca::sacar(double valor){
+    //TEMP
+    //std::cout << "Sacou de CP\n";
     if(valor > 0){
         if(valor <= this->saldo + limite){
             this->saldo -= valor;

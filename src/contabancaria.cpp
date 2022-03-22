@@ -1,6 +1,7 @@
 #include "contabancaria.h"
 #include <iostream>
 #include <string>
+#include <memory>
 
 ContaBancaria::ContaBancaria(int a, double b): numero_conta(a), saldo(b){};
 
@@ -18,7 +19,11 @@ bool ContaBancaria::depositar(double valor_deposito){
     }
 }
 
-void ContaBancaria::transferir(double valor, ContaBancaria& conta_destino){
+void ContaBancaria::transferir(double valor, std::shared_ptr<ContaBancaria>& conta_destino){
     sacar(valor);
-    conta_destino.depositar(valor);
+    conta_destino->depositar(valor);
 }
+
+int ContaBancaria::getNumeroConta() { return numero_conta; }
+
+void ContaBancaria::mostrarDados() {}

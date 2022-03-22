@@ -5,6 +5,8 @@
 ContaCorrente::ContaCorrente(int numero_conta, double saldo):ContaBancaria(numero_conta, saldo){};
 
 bool ContaCorrente::sacar(double valor){
+    //TEMP
+    //std::cout << "Sacou de CC\n";
     if(valor > 0 && this->saldo >= (valor + taxaDeOperacao)){
         this->saldo -= valor + taxaDeOperacao;
         return true;

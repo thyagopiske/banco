@@ -4,7 +4,7 @@
 #include "contabancaria.h"
 #include "imprimivel.h"
 
-class ContaPoupanca: public ContaBancaria, public Imprimivel {
+class ContaPoupanca: public ContaBancaria, public Imprimivel{
 private:
     double limite;
 public:
