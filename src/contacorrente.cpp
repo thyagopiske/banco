@@ -2,26 +2,26 @@
 #include "contacorrente.h"
 #include <iostream>
 
-ContaCorrente::ContaCorrente(int numero_conta, double saldo):ContaBancaria(numero_conta, saldo){};
+ContaCorrente::ContaCorrente(int numero_conta, double taxaDeOperacao): ContaBancaria(numero_conta), taxaDeOperacao(taxaDeOperacao){};
 
-bool ContaCorrente::sacar(double valor){
-    //TEMP
-    //std::cout << "Sacou de CC\n";
+void ContaCorrente::setTaxaDeOperacao(double nova_taxa){ taxaDeOperacao = nova_taxa; }
+
+double ContaCorrente::getTaxaDeOperacao(){ return taxaDeOperacao; }
+
+void ContaCorrente::sacar(double valor){
     if(valor > 0 && this->saldo >= (valor + taxaDeOperacao)){
         this->saldo -= valor + taxaDeOperacao;
-        return true;
     }else{
-        return false;
+        std::cout << "Valor invalido de saque\n";
     }
 }
 
-bool ContaCorrente::depositar(double valor){
+void ContaCorrente::depositar(double valor){
     if(valor > 0 && (saldo + valor) >= (taxaDeOperacao)){
         this->saldo += valor;
         this->saldo -= taxaDeOperacao;
-        return true;
     }else{
-        return false;
+        std::cout << "Valor invalido de deposito\n";
     }
 }
 
@@ -30,4 +30,5 @@ void ContaCorrente::mostrarDados(){
     std::cout << "Tipo: Conta Corrente" << std::endl;
     std::cout << "Numero: " << numero_conta << std::endl;
     std::cout << "Saldo: R$" << saldo << std::endl;
+    std::cout << "Taxa de Operacao: R$" << taxaDeOperacao << std::endl;
 }

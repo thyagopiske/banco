@@ -8,8 +8,10 @@ class ContaPoupanca: public ContaBancaria, public Imprimivel{
 private:
     double limite;
 public:
-    ContaPoupanca(int numero_conta, double saldo);
-    bool sacar(double valor);
+    ContaPoupanca(int numero_conta, double limite);
+    double getLimite();
+    void setLimite(double novo_limite);
+    void sacar(double valor);
     void mostrarDados();
 };
 

@@ -7,13 +7,13 @@
 class ContaBancaria{
 protected:
     int numero_conta;
-    double saldo;
+    double saldo=0;
 public:
-    ContaBancaria(int numero_conta, double saldo);
+    ContaBancaria(int numero_conta);
     int getNumeroConta();
     double getSaldo();
-    virtual bool sacar(double valor_saque);
-    virtual bool depositar(double valor_deposito);
+    virtual void sacar(double valor_saque);
+    virtual void depositar(double valor_deposito);
     void transferir(double valor, std::shared_ptr<ContaBancaria>& conta_destino);
     virtual void mostrarDados();
 };

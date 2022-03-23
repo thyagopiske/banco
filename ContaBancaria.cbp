@@ -40,13 +40,16 @@
 		<Unit filename="include/contapoupanca.h" />
 		<Unit filename="include/executavel.h" />
 		<Unit filename="include/imprimivel.h" />
+		<Unit filename="include/menu.h" />
 		<Unit filename="include/relatorio.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="main2.cpp" />
 		<Unit filename="src/Banco.cpp" />
 		<Unit filename="src/contabancaria.cpp" />
 		<Unit filename="src/contacorrente.cpp" />
 		<Unit filename="src/contapoupanca.cpp" />
 		<Unit filename="src/executavel.cpp" />
+		<Unit filename="src/menu.cpp" />
 		<Unit filename="src/relatorio.cpp" />
 		<Extensions />
 	</Project>
