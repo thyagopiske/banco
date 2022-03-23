@@ -6,11 +6,13 @@
 
 class ContaCorrente: public ContaBancaria, public Imprimivel{
 private:
-    double taxaDeOperacao; //se é um valor fixo posso declarar aq direto?
+    double taxaDeOperacao;
 public:
-    ContaCorrente(int numero_conta, double saldo);
-    bool sacar(double valor);
-    bool depositar(double valor);
+    ContaCorrente(int numero_conta, double taxaDeOperacao);
+    void setTaxaDeOperacao(double nova_taxa);
+    double getTaxaDeOperacao();
+    void sacar(double valor);
+    void depositar(double valor);
     void mostrarDados();
 };
 

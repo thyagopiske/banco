@@ -1,20 +1,20 @@
 #include "contabancaria.h"
 #include "contapoupanca.h"
 #include "imprimivel.h"
-#include <math.h>
 #include <iostream>
 
-ContaPoupanca::ContaPoupanca(int numero_conta, double saldo):ContaBancaria(numero_conta, saldo){};
+ContaPoupanca::ContaPoupanca(int numero_conta, double limite):ContaBancaria(numero_conta), limite(limite){};
 
-bool ContaPoupanca::sacar(double valor){
-    //TEMP
-    //std::cout << "Sacou de CP\n";
+double ContaPoupanca::getLimite() { return limite; }
+
+void ContaPoupanca::setLimite(double novo_limite){ limite = novo_limite; }
+
+void ContaPoupanca::sacar(double valor){
     if(valor > 0){
         if(valor <= this->saldo + limite){
             this->saldo -= valor;
-            return true;
         }else{
-            return false;
+            std::cout << "Valor de saque acima do limite\n";
         }
     }
 }
@@ -24,4 +24,5 @@ void ContaPoupanca::mostrarDados(){
     std::cout << "Tipo: Conta Poupanca" << std::endl;
     std::cout << "Numero: " << numero_conta << std::endl;
     std::cout << "Saldo: R$" << saldo << std::endl;
+    std::cout << "Limite: R$" << limite << std::endl;
 }
